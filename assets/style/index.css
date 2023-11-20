@@ -131,15 +131,17 @@ input[type="button"] {
   color: white;
   padding: 1rem;
   border: 0.1rem solid transparent;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
+  width: 10rem;
 }
 
 input[type="text"] {
   border: 0.1rem solid silver;
   padding: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   width: 5rem;
   text-align: center;
+  width: 10rem;
 }
 
 .display-alarm {
@@ -147,7 +149,8 @@ input[type="text"] {
 }
 
 .current-time {
-  height: 5rem;
+  /* height: 20rem; */
+  font-size: 10rem;
 }
 
 .fa-solid.fa-bell {
@@ -159,7 +162,9 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 8rem;
+  height: 5rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .flex-container {
@@ -168,5 +173,5 @@ input[type="text"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  /* gap: 5rem; */
 }
