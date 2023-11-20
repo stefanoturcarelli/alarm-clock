@@ -1,0 +1,16 @@
+{
+  "name": "alarm-clock",
+  "version": "1.0.0",
+  "description": "Digital alarm clock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": ["alarm", "clock"],
+  "author": "Stefano Turcarelli",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
