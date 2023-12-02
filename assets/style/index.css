@@ -124,10 +124,29 @@ body {
   background-color: #000;
   color: #5afb65;
   font-family: "VT323", monospace;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    #000 1px,
+    #000 2px
+  );
+  opacity: 0.4;
+  z-index: 1;
 }
 
 header {
-  border-bottom: 1px solid #57f861;
+  border-bottom: 2px solid #57f861;
 }
 
 main {
