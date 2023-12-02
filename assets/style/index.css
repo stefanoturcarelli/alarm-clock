@@ -168,6 +168,43 @@ main {
   background-color: #2f572c;
 }
 
+@media (max-width: 768px) {
+  .footer-bar {
+    flex-direction: column;
+  }
+
+  .footer-bar__item {
+    border: 0.2rem solid #000;
+    width: 100%;
+  }
+
+  .footer-bar__item:last-child {
+    border-bottom: none;
+  }
+
+  .hp {
+    border-right: none;
+  }
+
+  .ap {
+    border-left: none;
+  }
+
+  .level {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .level h2 {
+    flex: 1;
+  }
+
+  .level-bar {
+    flex: 1;
+    width: 100%;
+  }
+}
+
 .footer-bar__item {
   padding: 1rem;
   flex: 1;
