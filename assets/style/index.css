@@ -130,6 +130,11 @@ header {
   border-bottom: 1px solid #57f861;
 }
 
+main {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+
 .first-level-menu {
   display: flex;
   justify-content: space-between;
