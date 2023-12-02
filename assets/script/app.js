@@ -9,7 +9,7 @@ import {
   sleep,
   randomNumber,
   filterArray,
-	create,
+  create,
 } from "./utils.js";
 
 const clockDisplay = select(".clock-display");
@@ -24,3 +24,14 @@ const clock = () => {
 };
 
 setInterval(clock, 1000);
+
+// Sound Effects
+
+const headerBarItems = selectAll(".header-bar__item");
+const clickClean = new Audio("./assets/sounds/click-clean.mp3");
+
+headerBarItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    clickClean.play();
+  });
+});

@@ -143,6 +143,8 @@ body::before {
   );
   opacity: 0.4;
   z-index: 1;
+  /* Allow clicks to pass through */
+  pointer-events: none;
 }
 
 header {
@@ -235,4 +237,8 @@ main {
 .level-bar {
   border: 0.2rem solid #57f861;
   flex: 4;
+}
+
+.header-bar__item {
+  cursor: pointer;
 }
