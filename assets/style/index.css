@@ -122,11 +122,56 @@ a {
 
 body {
   background-color: #000;
-  color: #5AFB65;
-  font-family: 'VT323', monospace;
+  color: #5afb65;
+  font-family: "VT323", monospace;
 }
 
-footer {
-  margin-top: 50px;
-  text-align: center;
+header {
+  border-bottom: 1px solid #57f861;
+}
+
+.first-level-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f572c;
+}
+
+.footer-bar__item {
+  padding: 1rem;
+  flex: 1;
+}
+
+.hp {
+  flex: 1;
+  border-right: 0.2rem solid #000;
+}
+
+.ap {
+  text-align: right;
+  flex: 1;
+  border-left: 0.2rem solid #000;
+}
+
+.level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+}
+
+.level h2 {
+  flex: 1;
+}
+
+.level-bar {
+  border: 0.2rem solid #57f861;
+  flex: 4;
 }
