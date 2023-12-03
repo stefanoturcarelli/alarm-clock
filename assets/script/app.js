@@ -42,3 +42,32 @@ headerBarItems.forEach((item) => {
     clickClean.play();
   });
 });
+
+// Alarm
+
+const alarmDisplay = select(".alarm-display");
+const hoursInput = select(".hours-input");
+const minutesInput = select(".minutes-input");
+const setBtn = select(".set-btn");
+
+const alarmSound = new Audio("./assets/sounds/alarm.wav");
+
+const alarm = () => {
+  const date = new Date();
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+
+  if (alarmDisplay.innerHTML === `${hours}:${minutes}`) {
+    alarmSound.play();
+  }
+};
+
+setInterval(alarm, 1000);
+
+onEvent("click", setBtn, () => {
+  alarmDisplay.innerHTML = `${hoursInput.value}:${minutesInput.value}`;
+  hoursInput.value = "";
+  minutesInput.value = "";
+  alarmSound.pause();
+  clickClean.play();
+});

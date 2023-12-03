@@ -283,3 +283,51 @@ section {
   color: #000;
   transform: scale(0.9);
 }
+
+input[type="number"] {
+  background-color: #2f572c;
+  color: #57f861;
+  padding: 0.5rem;
+  width: 5rem;
+  text-align: center;
+}
+
+input[type="number"]::placeholder {
+  color: #57f861;
+}
+
+/* Get rid of the arrows from the input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="button"] {
+  background-color: #000;
+  color: #57f861;
+  border: 0.2rem solid #57f861;
+  text-align: center;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+  background-color: #57f861;
+  color: #000;
+  transform: scale(1.1);
+}
+
+input[type="button"]:active {
+  background-color: #57f861;
+  color: #000;
+  transform: scale(0.9);
+}
+
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
