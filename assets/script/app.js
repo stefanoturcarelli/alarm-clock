@@ -38,7 +38,7 @@ const headerBarItems = selectAll(".header-bar__item");
 const clickClean = new Audio("./assets/sounds/click-clean.mp3");
 
 headerBarItems.forEach((item) => {
-  item.addEventListener("click", () => {
+  onEvent("click", item, () => {
     clickClean.play();
   });
 });
