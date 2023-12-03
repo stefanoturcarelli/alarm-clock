@@ -27,6 +27,13 @@ setInterval(clock, 1000);
 
 // Sound Effects
 
+const bootBtn = select(".boot-btn");
+const bootSound = new Audio("./assets/sounds/boot.mp3");
+
+onEvent("click", bootBtn, () => {
+  bootSound.play();
+});
+
 const headerBarItems = selectAll(".header-bar__item");
 const clickClean = new Audio("./assets/sounds/click-clean.mp3");
 

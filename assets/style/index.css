@@ -156,6 +156,10 @@ main {
   padding: 2rem 0;
 }
 
+section {
+  margin: 2rem 0;
+}
+
 .first-level-menu {
   display: flex;
   justify-content: space-between;
@@ -240,5 +244,12 @@ main {
 }
 
 .header-bar__item {
+  cursor: pointer;
+}
+
+.boot-btn {
+  border: 0.2rem solid #57f861;
+  display: inline;
+  padding: 0.5rem;
   cursor: pointer;
 }
