@@ -50,7 +50,7 @@ const hoursInput = select(".hours-input");
 const minutesInput = select(".minutes-input");
 const setBtn = select(".set-btn");
 
-const alarmSound = new Audio("./assets/sounds/alarm.mp3");
+const alarmSound = new Audio("./assets/sounds/pip-boy-sfx.mp3");
 
 const alarm = () => {
   const date = new Date();
