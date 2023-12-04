@@ -25,7 +25,9 @@ const clock = () => {
 
 setInterval(clock, 1000);
 
-// Sound Effects
+// ! Sound Effects
+
+// * Boot button
 
 const bootBtn = select(".boot-btn");
 const bootSound = new Audio("./assets/sounds/boot.mp3");
@@ -34,16 +36,43 @@ onEvent("click", bootBtn, () => {
   bootSound.play();
 });
 
-const headerBarItems = selectAll(".header-bar__item");
+// * Clicks
+
 const clickClean = new Audio("./assets/sounds/click-clean.mp3");
+const clickOne = new Audio("./assets/sounds/click-1.mp3");
+const clickTwo = new Audio("./assets/sounds/click-2.mp3");
+const clickThree = new Audio("./assets/sounds/click-3.mp3");
+const clickFour = new Audio("./assets/sounds/click-4.mp3");
+const clickFive = new Audio("./assets/sounds/click-5.mp3");
+const clickSix = new Audio("./assets/sounds/click-6.mp3");
+const clickSeven = new Audio("./assets/sounds/click-7.mp3");
+const clickEight = new Audio("./assets/sounds/click-8.mp3");
+
+const clickSounds = [
+  clickOne,
+  clickTwo,
+  clickThree,
+  clickFour,
+  clickFive,
+  clickSix,
+  clickSeven,
+  clickEight,
+];
+
+function randomClick() {
+  const random = randomNumber(0, clickSounds.length - 1);
+  return clickSounds[random];
+}
+
+const headerBarItems = selectAll(".header-bar__item");
 
 headerBarItems.forEach((item) => {
   onEvent("click", item, () => {
-    clickClean.play();
+    randomClick().play();
   });
 });
 
-// Alarm
+// * Alarm
 
 const alarmDisplay = select(".alarm-display");
 const hoursInput = select(".hours-input");
@@ -73,7 +102,6 @@ onEvent("click", setBtn, () => {
 });
 
 // Use enter to set alarm with setBtn
-
 onEvent("keyup", minutesInput, (e) => {
   if (e.keyCode === 13) {
     alarmDisplay.innerHTML = `${hoursInput.value}:${minutesInput.value}`;
