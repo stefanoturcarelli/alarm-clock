@@ -71,3 +71,15 @@ onEvent("click", setBtn, () => {
   alarmSound.pause();
   clickClean.play();
 });
+
+// Use enter to set alarm with setBtn
+
+onEvent("keyup", minutesInput, (e) => {
+  if (e.keyCode === 13) {
+    alarmDisplay.innerHTML = `${hoursInput.value}:${minutesInput.value}`;
+    hoursInput.value = "";
+    minutesInput.value = "";
+    alarmSound.pause();
+    clickClean.play();
+  }
+});
